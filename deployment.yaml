@@ -4,7 +4,7 @@
   become: yes
   tasks:
     - name: Install httpd
-      yum:
+      apt:
         name: httpd
         state: present
 
