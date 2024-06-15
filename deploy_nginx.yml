@@ -4,6 +4,11 @@
   become: true  # Run tasks with sudo
 
   tasks:
+    - name: Stop Apache service if running
+      service:
+        name: apache2
+        state: stopped
+      ignore_errors: yes 
     - name: Install NGINX
       apt:
         name: nginx
